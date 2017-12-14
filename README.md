@@ -2,6 +2,14 @@
 
 实现一个个性化播放器，弃用video标签自带的进度条 播放按钮 时间显示 声音控件等。
 
+[查看效果](https://shaniawei.github.io/playvideo/play.html)
+
+## **图片展示**
+
+PC端：
+
+ ![2](C:\Users\chenweibin\Desktop\2.jpg)
+
 ## **目前实现情况**
 
 1.video画面 画面上的按钮 以及下方的按钮 点击 实现播放暂停效果
