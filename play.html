@@ -1,42 +1,50 @@
 ﻿<!DOCTYPE html>
 <html>
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width initial-scale=1.0 ">
-  <link rel="stylesheet" type="text/css" href="play.css" >
-<script type="text/javascript" src="jquery-1.12.2.js"></script>
-  <script type="text/javascript" src="play.js"></script>
- </head>
- <body>
-  <div id="main">
-   <video id="video" poster="images/movie.jpg">
-    <source src="movie5.ogv">
-   </video>
-   <div id="bigBtn">
-    <span></span>
-   </div>
 
-   <div id="progress">
-    <div id="currentTime">00:00:00</div>
-    <div id="progressBar">
-     <div id="playedProgressBar"></div>
-     <span id="progressBarBlock"></span>
-    </div>
-    <div id="durationTime">00:00:00</div>
-   </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="play.css">
+    <script type="text/javascript" src="jquery-1.12.2.js"></script>
+    <script type="text/javascript" src="play.js"></script>
+</head>
 
-   <div id="buttonTools">
-    <div id="smallBtn"><img src="images/stop.jpg" alt="停止" title="停止" /></div>
-    <div id="voice">
-     <div id="voicePic"><img src="images/voice.jpg" title="音量" alt="音量" /></div>
-     <div id="voiceLine">
-      <span id="voiceLineBlock"></span>
-     </div>
+<body>
+    <div class="main">
+        <div class="video-place">
+            <video id="video" poster="images/movie.jpg">
+              <source src="movie5.ogv">
+            </video>
+            <div class="bigBtn">
+                <span></span>
+            </div>
+        </div>
+
+
+        <div class="progress">
+            <div class="timeShow" id="currentTime">00:00:00</div>
+            <div class="progressBar">
+                <div id="playedProgressBar"></div>
+                <span id="progressBarBlock"></span>
+            </div>
+            <div class="timeShow" id="durationTime">00:00:00</div>
+        </div>
+
+        <div class="buttonTools">
+            <div class="smallBtn"><img src="images/stop.jpg" alt="停止" title="停止" /></div>
+            <div class="voice">
+                <div class="voicePic"><img src="images/voice.jpg" title="音量" alt="音量" /></div>
+                <div class="voiceLine">
+                    <span id="voiceLineBlock"></span>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="myStyle">我的播放器我做主</div>
+            <div class="fullScreen"><img src="images/full.png" alt="全屏" title="全屏"></div>
+        </div>
+
     </div>
-    <div id="myStyle">我的播放器我做主</div>
-    <div id="fullScreen"><img src="images/full.png" alt="全屏" title="全屏"></div>
-    </div>
-    
-   </div>
- </body>
+
+</body>
+
 </html>

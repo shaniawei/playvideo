@@ -1,166 +1,365 @@
-*{
-	margin:0px;
-	padding:0px;
-	/*overflow: hidden;*/
-}
-html{
-	color:#000;
-	font-size:14px;
-}
-#main{
-	width:698px;
-	background:#000;
-	margin:10px 0 0 10px;
-	position:relative;
-}
-#video{
-	width:698px;
-	height:298px;
-	cursor:pointer;
-}
-#bigBtn{
-	width:136px;
-	height:136px;
-	background:#333;
-	border-radius:5px;
-	box-shadow:3px 3px 3px;
-	position:absolute;
-    top:81px;
-    left:281px;
-    cursor: pointer;
-}
-#bigBtn span{
-	display:block;
-	width:0px;
-	height:0px;
-	border-left:60px solid #fff;
-	border-top:50px solid transparent;
-	border-bottom:50px solid transparent;
-	margin-top:18px;
-	margin-left:48px;
-}
-#progress{
-	width:100%;
-	height:22px;
-}
-#currentTime{
-	width:50px;
-	height:14px;
-	color:#fff;
-	font-size:12px;   /*原来是14px，结果导致overflow,错误原因是没有计算字需要的宽度*/
-	float:left;
-	background:#000;
-	margin-right: 5px;
-	margin-top:4px;
-	margin-left: 4px;  /*后面加*/
-}
-#progressBar{
-	width:580px;      /*原来是588px，结果导致durationTime到下面一行去了,可能是因为我忽略了border */
-	height:14px;
-	float:left;
-    margin-top:3px;
-    margin-right:5px;
-    background:#000;
-    border:1px solid #303030;
-    cursor: pointer;
-}
-#playedProgressBar{
-	width:0px;
-	height:14px;
-    background:#399ccf;
-    cursor:pointer;
-    float:left;       /*后面加*/
-}
-#progressBar span{
-	display:inline-block;
-	position:absolute;
-	width:14px;
-	height:14px;
-	background: #fff;
-	border-radius:3px;
-	left:60px;
-    cursor: pointer;
-}
-#durationTime{
-	float:left;
-	width:50px;
-	height:14px;
-	font-size:12px;
-	color:#fff;
-	background: #000;
-    margin-top:4px;
-}
-#buttonTools{
-	clear: both;
-	width:100%;
-	height:46px;
-	background:url(images/bars.jpg) repeat-x 0 0 scroll; 
-}
-#smallBtn{
-	cursor: pointer;
-	width:34px;
-	height: 33px;
-	margin-left:3px;
-	float:left;
-	margin-top:6px;
-}
-#voice{
-	float: left;
-	width:65px;
-    height:15px;
-    margin-top:15px;
-    margin-left:20px;      /*要注意这20px*/
-}
-#voicePic{
-	width:16px;
-	height:15px;
-	float:left;
-}
-#voiceLine{
-	background: url(images/voiceline.jpg) no-repeat;
-	margin-left:2px;
-	float:left;
-	width:45px;
-	height:13px;
-	cursor: pointer;
-}
-#voiceLine span{
-	display:inline-block;
-	width:6px;
-	height: 13px;
-	background: #fff;
-	border-radius:2px;
-	position:absolute;
-	left:97px;      /*原来是77px，少加了20px*/
-}
-#myStyle{
-	margin:8px 20px 0px;
-	height:30px;
-	width:510px;
-	background:#ccc;
-	border-radius:5px;
-	float:left;
-	text-align: center;
-	line-height: 30px;
-	font-size:18px;        /*字体方面我做的不够好，一味的使用font-size会导致字体失真*/
-	text-shadow:0 0 4px #fff,0 0 5px #fff;
-}
-#fullScreen{
-	width:19px;
-	height:17px;
-	float: left;
-	margin-right:4px;
-	margin-top:15px;
-	cursor: pointer;
-	word-spacing:2px;
-}
-#fullScreen img{
-	width:17px;
-	height:15px;
-}
-#fullScreen img:hover{
-	width:19px;
-	height: 17px;
-	margin-top:-1px;
-	margin-left: -1px;
-}
+		
+		@media (max-width:750px){
+			*{
+				margin:0rem;
+				padding:0rem;
+				-webkit-tap-highlight-color: rgba(0,0,0,0)
+			}
+
+			.main{
+				width:19.083333rem;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+    			margin-top: 20px;
+			}
+			.video-place{
+				width:100%;
+				height:8.216667rem;
+				cursor:pointer;
+				position: relative;
+			}
+			#video{
+				width: 100%;
+				height: 100%;
+			}
+			.bigBtn{
+				width:3.666667rem;
+				height:3.666667rem;
+				background:#333;
+				border-radius:.208333rem;
+				box-shadow:.125rem .125rem .125rem;
+				position:absolute;
+				top: 50%;
+				left: 50%;
+				cursor: pointer;
+				margin-top: -1.833333rem;
+				margin-left: -1.833333rem;
+			}
+			.bigBtn span{
+				width:0;
+				height:0;
+				border-left:1.5rem solid #fff;
+				border-top:1.083333rem solid transparent;
+				border-bottom:1.083333rem solid transparent;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-40%,-50%);
+			}
+			.progress{
+				width:100%;
+				height:1.25rem;
+				box-sizing: border-box;
+				padding: .166667rem;
+				background:#000;
+			}
+			.timeShow{
+				display: inline-block;
+				height:100%;
+				line-height: .916667rem;
+				color:#fff;
+				font-size:.5rem;   /*原来是.583333rem，结果导致overflow,错误原因是没有计算字需要的宽度*/
+				float:left;
+			}
+			.progressBar{
+				width:12.166667rem;      /*原来是24.5rem，结果导致durationTime到下面一行去了,可能是因为我忽略了border */
+				height:.583333rem;
+				float:left;
+				background:#000;
+				border:.041667rem solid #303030;
+				cursor: pointer;
+				margin: auto .25rem;
+				position: relative;
+				top: 50%;
+				margin-top: -.291667rem;
+				border-radius: .166667rem;
+			}
+			#playedProgressBar{
+				width:0;
+				height:100%;
+				border-radius: .166667rem;
+				background:#399ccf;
+				cursor:pointer;
+				float:left;       /*后面加*/
+			}
+			.progressBar span{
+				display:inline-block;
+				position:absolute;
+				width:.583333rem;
+				height:100%;
+				background: #fff;
+				border-radius:.125rem;
+				left:0;
+				cursor: pointer;
+			}
+			.buttonTools{
+				clear: both;
+				width:100%;
+				height:1.916667rem;
+				background:url(images/bars.jpg) repeat-x 0 0 scroll; 
+			}
+			.smallBtn{
+				cursor: pointer;
+				width:1.416667rem;
+				height: 1.375rem;
+				margin-left:.125rem;
+				float:left;
+				margin-top:.25rem;
+			}
+			.smallBtn img{
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.voice{
+				float: left;
+				width:2.708333rem;
+				height:.625rem;
+				margin-top:.625rem;
+				margin-left:.633333rem;      /*要注意这.833333rem*/
+			}
+			.voicePic{
+				width:.666667rem;
+				height:.625rem;
+				float:left;
+			}
+			.voicePic img{
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.voiceLine{
+				background: url(images/voiceline.jpg) no-repeat;
+				margin-left:.083333rem;
+				float:left;
+				width:1.875rem;
+				height:.541667rem;
+				cursor: pointer;
+				position: relative;
+			}
+			.voiceLine span{
+				display:inline-block;
+				width:.25rem;
+				height: .541667rem;
+				background: #fff;
+				border-radius:.083333rem;
+				position:absolute;
+				left:0.8333333333333334rem;      /*原来是3.208333rem，少加了.833333rem*/
+			}
+			.myStyle{
+				margin:.333333rem .833333rem 0;
+				height:1.25rem;
+				width:11.25rem;
+				background:#ccc;
+				border-radius:.208333rem;
+				float:left;
+				text-align: center;
+				line-height: 1.25rem;
+				font-size:.75rem;        /*字体方面我做的不够好，一味的使用font-size会导致字体失真*/
+				text-shadow:0 0 .166667rem #fff,0 0 .208333rem #fff;
+			}
+			.fullScreen{
+				width:.791667rem;
+				height:.708333rem;
+				float: left;
+				margin-right:.166667rem;
+				margin-top:.625rem;
+				cursor: pointer;
+				word-spacing:.083333rem;
+			}
+			.fullScreen img{
+				width:.708333rem;
+				height:.625rem;
+				float: left;
+			}
+			.fullScreen img:hover{
+				width:.791667rem;
+				height: .708333rem;
+				margin-top:-.041667rem;
+				margin-left: -.041667rem;
+			}
+		}
+
+
+		@media (min-width:751px){
+			*{
+				margin:0px;
+				padding:0px;
+			}
+
+			.main{
+				width:698px;
+				position: absolute;
+				left: 50%;
+				top: 35%;
+				transform: translate(-50%,-50%);
+			}
+			.video-place{
+				width:100%;
+				height:298px;
+				cursor:pointer;
+				position: relative;
+			}
+			#video{
+				width: 100%;
+				height: 100%;
+			}
+			.bigBtn{
+				width:136px;
+				height:136px;
+				background:#333;
+				border-radius:5px;
+				box-shadow:3px 3px 3px;
+				position:absolute;
+				top: 50%;
+				left: 50%;
+				cursor: pointer;
+				margin-top: -68px;
+				margin-left: -68px;
+			}
+			.bigBtn span{
+				width:0;
+				height:0;
+				border-left:60px solid #fff;
+				border-top:50px solid transparent;
+				border-bottom:50px solid transparent;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-40%,-50%);
+			}
+			.progress{
+				width:100%;
+				height:30px;
+				box-sizing: border-box;
+				padding: 4px;
+				background:#000;
+			}
+			.timeShow{
+				display: inline-block;
+				height:100%;
+				line-height: 22px;
+				color:#fff;
+				font-size:12px;   /*原来是14px，结果导致overflow,错误原因是没有计算字需要的宽度*/
+				float:left;
+			}
+			.progressBar{
+				width:580px;      /*原来是588px，结果导致durationTime到下面一行去了,可能是因为我忽略了border */
+				height:14px;
+				float:left;
+				background:#000;
+				border:1px solid #303030;
+				cursor: pointer;
+				margin: auto 6px;
+				position: relative;
+				top: 50%;
+				margin-top: -7px;
+				border-radius: 4px;
+			}
+			#playedProgressBar{
+				width:0;
+				height:100%;
+				border-radius: 4px;
+				background:#399ccf;
+				cursor:pointer;
+				float:left;       /*后面加*/
+			}
+			.progressBar span{
+				display:inline-block;
+				position:absolute;
+				width:14px;
+				height:100%;
+				background: #fff;
+				border-radius:3px;
+				left:0;
+				cursor: pointer;
+			}
+			.buttonTools{
+				clear: both;
+				width:100%;
+				height:46px;
+				background:url(images/bars.jpg) repeat-x 0 0 scroll; 
+			}
+			.smallBtn{
+				cursor: pointer;
+				width:34px;
+				height: 33px;
+				margin-left:3px;
+				float:left;
+				margin-top:6px;
+			}
+			.smallBtn img{
+				width: 100%;
+				height: 100%;
+				flex: left;
+			}
+			.voice{
+				float: left;
+				width:65px;
+				height:15px;
+				margin-top:15px;
+				margin-left:20px;      /*要注意这20px*/
+			}
+			.voicePic{
+				width:16px;
+				height:15px;
+				float:left;
+			}
+			.voicePic img{
+				width: 100%;
+				height: 100%;
+				float: left;
+			}
+			.voiceLine{
+				background: url(images/voiceline.jpg) no-repeat;
+				margin-left:2px;
+				float:left;
+				width:45px;
+				height:13px;
+				cursor: pointer;
+				position: relative;
+			}
+			.voiceLine span{
+				display:inline-block;
+				width:6px;
+				height: 13px;
+				background: #fff;
+				border-radius:2px;
+				position:absolute;
+				left:20px;      /*原来是77px，少加了20px*/
+			}
+			.myStyle{
+				margin:8px 20px 0;
+				height:30px;
+				width:510px;
+				background:#ccc;
+				border-radius:5px;
+				float:left;
+				text-align: center;
+				line-height: 30px;
+				font-size:18px;        /*字体方面我做的不够好，一味的使用font-size会导致字体失真*/
+				text-shadow:0 0 4px #fff,0 0 5px #fff;
+			}
+			.fullScreen{
+				width:19px;
+				height:17px;
+				float: left;
+				margin-right:4px;
+				margin-top:15px;
+				cursor: pointer;
+				word-spacing:2px;
+			}
+			.fullScreen img{
+				width:17px;
+				height:15px;
+				float: left;
+			}
+			.fullScreen img:hover{
+				width:19px;
+				height: 17px;
+				margin-top:-1px;
+				margin-left: -1px;
+			}
+		}
+
