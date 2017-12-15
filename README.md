@@ -8,7 +8,7 @@
 
 PC端：
 
- ![2](https://github.com/shaniawei/playvideo/images/2.jpg)
+ ![Image text](https://github.com/shaniawei/playvideo/images/2.jpg)
 
 ## **目前实现情况**
 
